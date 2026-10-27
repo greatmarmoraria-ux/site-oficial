@@ -1,0 +1,385 @@
+/* =====================================================================
+   SEÇÃO 05 — PROJETOS REALIZADOS
+   Identidade: Top Banner, Filtros Dinâmicos, Cards com Toggle Foto Real x IA
+===================================================================== */
+
+.projetosSection {
+  background-color: #faf8f5;
+  color: #111317;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(196, 138, 58, 0.2);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 85px 4% 90px;
+}
+
+/* ---------------- TOP BANNER ---------------- */
+.topBanner {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 16px 40px rgba(17, 19, 23, 0.16);
+  margin-bottom: 50px;
+  background-color: #111317;
+  border: 1px solid rgba(196, 138, 58, 0.25);
+}
+
+.bannerBg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.bannerImg {
+  object-fit: cover;
+  object-position: center right;
+}
+
+.bannerOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(10, 11, 13, 0.94) 0%, rgba(10, 11, 13, 0.8) 45%, rgba(10, 11, 13, 0.25) 85%);
+}
+
+.bannerContent {
+  position: relative;
+  z-index: 2;
+  padding: 50px 48px;
+  max-width: 600px;
+  color: #ffffff;
+}
+
+.eyebrowRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #c48a3a;
+}
+
+.eyebrowLine {
+  width: 50px;
+  height: 1.5px;
+  background-color: #c48a3a;
+}
+
+.bannerTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(34px, 4vw, 50px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin: 0 0 18px;
+}
+
+.goldHighlight {
+  color: #c48a3a;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.bannerDesc {
+  font-family: var(--font-sans);
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: #d1d5db;
+  margin-bottom: 28px;
+}
+
+.bannerCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #f0ba75 0%, #c48a3a 100%);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(196, 138, 58, 0.3);
+  transition: all 0.3s ease;
+}
+
+.bannerCta:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #f7ca8c 0%, #d49845 100%);
+  box-shadow: 0 10px 26px rgba(196, 138, 58, 0.45);
+}
+
+.ctaArrow {
+  font-size: 17px;
+  transition: transform 0.2s ease;
+}
+
+.bannerCta:hover .ctaArrow {
+  transform: translateX(4px);
+}
+
+/* ---------------- FILTROS DE CATEGORIA ---------------- */
+.filtersRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+}
+
+.filtersRow::-webkit-scrollbar {
+  display: none;
+}
+
+.filterButton {
+  padding: 11px 24px;
+  border-radius: 9999px;
+  background: #ffffff;
+  border: 1px solid rgba(196, 138, 58, 0.25);
+  color: #4b5260;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+.filterButton:hover {
+  border-color: #c48a3a;
+  color: #111317;
+  transform: translateY(-1px);
+}
+
+.filterButtonActive {
+  background: linear-gradient(135deg, #f0ba75 0%, #c48a3a 100%);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 16px rgba(196, 138, 58, 0.3);
+}
+
+/* ---------------- GRID DE PROJETOS ---------------- */
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.projectCard {
+  background: #ffffff;
+  border: 1px solid rgba(196, 138, 58, 0.22);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(17, 19, 23, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(196, 138, 58, 0.16);
+  border-color: rgba(196, 138, 58, 0.45);
+}
+
+.cardMediaWrapper {
+  position: relative;
+  width: 100%;
+  height: 270px;
+  background-color: #1a1d22;
+  overflow: hidden;
+}
+
+.cardImage {
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.projectCard:hover .cardImage {
+  transform: scale(1.04);
+}
+
+/* Top Badge on Card Image */
+.badgeAi {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 3;
+  padding: 5px 12px;
+  background: rgba(13, 15, 18, 0.84);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(196, 138, 58, 0.35);
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  color: #e5aa5f;
+  letter-spacing: 0.02em;
+}
+
+.badgeOriginal {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 3;
+  padding: 5px 12px;
+  background: rgba(30, 80, 50, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(75, 181, 67, 0.4);
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  color: #d1fae5;
+  letter-spacing: 0.02em;
+}
+
+/* Compare Toggle Button */
+.compareToggleBtn {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  z-index: 3;
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: rgba(13, 15, 18, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(196, 138, 58, 0.4);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.compareToggleBtn:hover {
+  background: #c48a3a;
+  border-color: #c48a3a;
+  color: #ffffff;
+}
+
+/* Card Body */
+.cardInfo {
+  padding: 22px 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cardTitleRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.cardTitle {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 600;
+  color: #111317;
+  margin: 0;
+}
+
+.cardArrow {
+  color: #c48a3a;
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+.projectCard:hover .cardArrow {
+  transform: translateX(4px);
+}
+
+.cardMaterial {
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  color: #606877;
+  margin: 0 0 14px;
+}
+
+.cardFooterAction {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 14px;
+}
+
+.cardActionLink {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: #c48a3a;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cardActionLink:hover {
+  text-decoration: underline;
+}
+
+.cardCategoryTag {
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  color: #8c93a0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ---------------- RESPONSIVE BREAKPOINTS ---------------- */
+@media (max-width: 1080px) {
+  .projectsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 65px 5% 55px;
+  }
+  .topBanner {
+    min-height: 320px;
+  }
+  .bannerContent {
+    padding: 30px 22px;
+  }
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .cardMediaWrapper {
+    height: 240px;
+  }
+  .bannerCta {
+    width: 100%;
+    justify-content: center;
+  }
+}
