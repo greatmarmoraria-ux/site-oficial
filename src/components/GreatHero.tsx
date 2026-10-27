@@ -4,10 +4,10 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./GreatHero.module.css";
 
-// Configurable WhatsApp direct contact (defaulting to official number from original logo)
+// Configuração comercial confirmada do WhatsApp
 const WHATSAPP_PHONE = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5516994370355";
 const WHATSAPP_DEFAULT_TEXT =
-  "Olá! Vim pelo site da Great Marmoraria e gostaria de solicitar um orçamento para o meu projeto.";
+  "Olá! Conheci a GREAT MARMORARIA pelo site e gostaria de solicitar um orçamento.";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(
   WHATSAPP_DEFAULT_TEXT
 )}`;
@@ -47,7 +47,7 @@ export default function GreatHero() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Prevent background scroll when mobile menu is open
+  // Previne rolagem do fundo quando o menu mobile está aberto
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -75,7 +75,6 @@ export default function GreatHero() {
           strokeLinejoin="round"
           aria-hidden="true"
         >
-          {/* Cooktop & Counter */}
           <rect x="5" y="10" width="30" height="22" rx="2" />
           <line x1="20" y1="10" x2="20" y2="32" />
           <circle cx="12.5" cy="18" r="2.5" />
@@ -102,7 +101,6 @@ export default function GreatHero() {
           strokeLinejoin="round"
           aria-hidden="true"
         >
-          {/* Modern basin & faucet */}
           <path d="M12 18 C12 11 16 9 18 9 C20 9 21 10.5 21 12 L21 20" />
           <path d="M6 20 C6 27 11 31 20 31 C29 31 34 27 34 20 L6 20 Z" />
           <line x1="12" y1="34" x2="28" y2="34" />
@@ -126,7 +124,6 @@ export default function GreatHero() {
           strokeLinejoin="round"
           aria-hidden="true"
         >
-          {/* Gourmet grill hood & grate */}
           <path d="M8 15 L14 8 L26 8 L32 15 Z" />
           <line x1="6" y1="18" x2="34" y2="18" />
           <line x1="10" y1="22" x2="30" y2="22" />
@@ -152,7 +149,6 @@ export default function GreatHero() {
           strokeLinejoin="round"
           aria-hidden="true"
         >
-          {/* Waterfall edge & niche architectural stairs */}
           <path d="M7 32 L7 10 L19 10 L19 18 L29 18 L29 25 L34 25 L34 32 Z" />
           <line x1="5" y1="32" x2="35" y2="32" />
           <line x1="13" y1="10" x2="13" y2="18" strokeDasharray="1.5 1.5" />
@@ -175,7 +171,6 @@ export default function GreatHero() {
           strokeLinejoin="round"
           aria-hidden="true"
         >
-          {/* Crossed drafting square / measuring rulers */}
           <line x1="8" y1="8" x2="32" y2="32" />
           <line x1="32" y1="8" x2="8" y2="32" />
           <rect
@@ -216,17 +211,17 @@ export default function GreatHero() {
           className={`${styles.header} ${scrolled ? styles.headerScrolled : ""}`}
         >
           <div className={styles.headerContainer}>
-            {/* Brand Logo */}
+            {/* Brand Logo - Versão original da GREAT MARMORARIA sem telefone */}
             <a
               href="#inicio"
               className={styles.brandLink}
               title="GREAT MARMORARIA - Página Inicial"
             >
               <Image
-                src="/images/logo-great-original.png"
+                src="/images/logo-great-sem-telefone.png"
                 alt="GREAT MARMORARIA"
-                width={175}
-                height={95}
+                width={200}
+                height={110}
                 priority
                 className={styles.brandLogoImg}
               />
@@ -266,7 +261,6 @@ export default function GreatHero() {
                 id="header-cta-orcamento"
               >
                 <span className={styles.ctaIconWrapper} aria-hidden="true">
-                  {/* WhatsApp SVG Icon */}
                   <svg
                     className={styles.whatsappIcon}
                     viewBox="0 0 24 24"
@@ -323,10 +317,10 @@ export default function GreatHero() {
           <div className={styles.mobileDrawerContent}>
             <div className={styles.mobileDrawerHeader}>
               <Image
-                src="/images/logo-great-original.png"
+                src="/images/logo-great-sem-telefone.png"
                 alt="GREAT MARMORARIA"
-                width={140}
-                height={75}
+                width={160}
+                height={88}
                 className={styles.mobileLogo}
               />
               <button

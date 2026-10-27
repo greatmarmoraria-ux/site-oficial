@@ -1,77 +1,30 @@
 import React from "react";
 import GreatHero from "@/components/GreatHero";
+import AboutSection from "@/components/AboutSection";
 
 export default function Home() {
   const WHATSAPP_PHONE =
     process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5516994370355";
-  const WHATSAPP_URL = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(
-    "Olá! Gostaria de falar sobre o projeto da Great Marmoraria."
-  )}`;
+  const WHATSAPP_MSG = encodeURIComponent(
+    "Olá! Conheci a GREAT MARMORARIA pelo site e gostaria de solicitar um orçamento."
+  );
+  const WHATSAPP_URL = `https://wa.me/${WHATSAPP_PHONE}?text=${WHATSAPP_MSG}`;
 
   return (
     <main style={{ minHeight: "100vh", backgroundColor: "#0b0c0e" }}>
-      {/* ================= HERO SECTION APROVADA ================= */}
+      {/* ================= SEÇÃO 01 — HERO APROVADA (ESCURA & DOURADA) ================= */}
       <GreatHero />
 
-      {/* ================= SMOOTH SECTION ANCHORS (SEÇÕES FUTURAS) ================= */}
-      {/* Previne links quebrados para as próximas etapas aprovadas do projeto */}
-      <div
-        id="sobre-nos"
-        style={{
-          scrollMarginTop: "90px",
-          padding: "60px 4%",
-          maxWidth: "1440px",
-          margin: "0 auto",
-          borderTop: "1px solid rgba(255, 255, 255, 0.05)",
-        }}
-      >
-        <span
-          style={{
-            fontSize: "12px",
-            letterSpacing: "0.2em",
-            color: "#e5aa5f",
-            textTransform: "uppercase",
-            fontWeight: 600,
-          }}
-        >
-          GREAT MARMORARIA · RIBEIRÃO PRETO
-        </span>
-        <h2
-          style={{
-            fontFamily: "var(--font-serif)",
-            fontSize: "clamp(24px, 3vw, 36px)",
-            color: "#ffffff",
-            margin: "12px 0 16px",
-            fontWeight: 400,
-          }}
-        >
-          Excelência e precisão em cada detalhe de pedra nobre
-        </h2>
-        <p
-          style={{
-            maxWidth: "680px",
-            color: "#9ca3af",
-            fontSize: "15px",
-            lineHeight: 1.7,
-          }}
-        >
-          Bancadas, pias, ilhas gourmet e revestimentos sob medida com pedras
-          naturais e ultracompactas de padrão internacional. Seção institucional
-          completa em preparação para a próxima etapa.
-        </p>
-      </div>
+      {/* ================= SEÇÃO 02 EM DIANTE — MODO CLARO APROVADO ================= */}
+      <AboutSection />
 
-      <div id="materiais" style={{ scrollMarginTop: "90px" }} />
-      <div id="projetos" style={{ scrollMarginTop: "90px" }} />
-      <div id="parcerias" style={{ scrollMarginTop: "90px" }} />
-
-      {/* ================= CONTATO / RODAPÉ ================= */}
+      {/* ================= CONTATO / RODAPÉ REFINADO ================= */}
       <footer
         id="contato"
         style={{
           scrollMarginTop: "90px",
-          backgroundColor: "#08090a",
-          borderTop: "1px solid rgba(229, 170, 95, 0.15)",
+          backgroundColor: "#111317",
+          borderTop: "1px solid rgba(214, 158, 85, 0.2)",
           padding: "50px 4% 40px",
         }}
       >
@@ -90,10 +43,10 @@ export default function Home() {
             <div
               style={{
                 fontFamily: "var(--font-serif)",
-                fontSize: "18px",
+                fontSize: "19px",
                 color: "#e5aa5f",
                 fontWeight: 600,
-                letterSpacing: "0.08em",
+                letterSpacing: "0.06em",
               }}
             >
               GREAT MARMORARIA
@@ -105,7 +58,7 @@ export default function Home() {
                 marginTop: "4px",
               }}
             >
-              Ribeirão Preto · SP | Atendimento em toda a região
+              Ribeirão Preto · SP | Especialistas em pedras nobres sob medida
             </p>
           </div>
 
@@ -134,7 +87,7 @@ export default function Home() {
             >
               WhatsApp Comercial: (16) 99437-0355 ↗
             </a>
-            <span style={{ color: "#4b5563" }}>|</span>
+            <span style={{ color: "#374151" }}>|</span>
             <span style={{ color: "#6b7280", fontSize: "13px" }}>
               © {new Date().getFullYear()} GREAT MARMORARIA. Todos os direitos
               reservados.
