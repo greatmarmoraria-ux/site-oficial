@@ -1,0 +1,436 @@
+/* =====================================================================
+   SEÇÃO 04 — PEDRAS E MATERIAIS
+   Identidade: Top Banner Conceitual, Vitrine de Amostras, Faixa e CTA Nero Marquina
+===================================================================== */
+
+.materiaisSection {
+  background-color: #faf8f5;
+  color: #111317;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(196, 138, 58, 0.2);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 85px 4% 90px;
+}
+
+/* ---------------- TOP BANNER CONCEITUAL ---------------- */
+.topBanner {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 16px 40px rgba(17, 19, 23, 0.16);
+  margin-bottom: 60px;
+  background-color: #111317;
+  border: 1px solid rgba(196, 138, 58, 0.25);
+}
+
+.bannerBg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.bannerImg {
+  object-fit: cover;
+  object-position: center right;
+}
+
+.bannerOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(10, 11, 13, 0.94) 0%, rgba(10, 11, 13, 0.8) 45%, rgba(10, 11, 13, 0.25) 85%);
+}
+
+.bannerContent {
+  position: relative;
+  z-index: 2;
+  padding: 50px 48px;
+  max-width: 600px;
+  color: #ffffff;
+}
+
+.eyebrowRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #c48a3a;
+}
+
+.eyebrowLine {
+  width: 50px;
+  height: 1.5px;
+  background-color: #c48a3a;
+}
+
+.bannerTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(34px, 4vw, 50px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin: 0 0 18px;
+}
+
+.goldHighlight {
+  color: #c48a3a;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.bannerDesc {
+  font-family: var(--font-sans);
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: #d1d5db;
+  margin-bottom: 28px;
+}
+
+.bannerCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #f0ba75 0%, #c48a3a 100%);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(196, 138, 58, 0.3);
+  transition: all 0.3s ease;
+}
+
+.bannerCta:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #f7ca8c 0%, #d49845 100%);
+  box-shadow: 0 10px 26px rgba(196, 138, 58, 0.45);
+}
+
+.ctaArrow {
+  font-size: 17px;
+  transition: transform 0.2s ease;
+}
+
+.bannerCta:hover .ctaArrow {
+  transform: translateX(4px);
+}
+
+/* ---------------- VITRINE DE AMOSTRAS ---------------- */
+.showcaseHeader {
+  margin-bottom: 24px;
+}
+
+.showcaseHeading {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  color: #111317;
+  font-weight: 600;
+  margin: 0;
+}
+
+.swatchesGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.swatchCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid rgba(196, 138, 58, 0.2);
+  border-radius: 12px;
+  padding: 14px 12px 18px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.swatchCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(196, 138, 58, 0.18);
+  border-color: rgba(196, 138, 58, 0.5);
+}
+
+.swatchImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  background-color: #222;
+}
+
+.swatchImage {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.swatchCard:hover .swatchImage {
+  transform: scale(1.08);
+}
+
+.swatchCategory {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #c48a3a;
+  margin-bottom: 3px;
+}
+
+.swatchName {
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #111317;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.swatchDisclaimer {
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  color: #7b8392;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+/* ---------------- VALUE STRIP ---------------- */
+.valueStrip {
+  background-color: #fcfbf9;
+  border: 1px solid rgba(196, 138, 58, 0.25);
+  border-radius: 12px;
+  padding: 26px 20px;
+  margin-bottom: 48px;
+}
+
+.valueGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.valueItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 6px 16px;
+}
+
+.valueItemDivider {
+  border-right: 1px solid rgba(196, 138, 58, 0.2);
+}
+
+.valueIcon {
+  color: #c48a3a;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.valueIconSvg {
+  width: 26px;
+  height: 26px;
+}
+
+.valueContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.valueTitle {
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #111317;
+}
+
+.valueDesc {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: #606877;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ---------------- BOTTOM CTA BANNER (NERO MARQUINA) ---------------- */
+.bottomCtaBanner {
+  position: relative;
+  background-color: #0d0f12;
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 34px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  border: 1px solid rgba(196, 138, 58, 0.35);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+}
+
+.ctaMarbleBg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.ctaMarbleImg {
+  object-fit: cover;
+}
+
+.ctaLeftCol {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.ctaWhatsappIcon {
+  color: #c48a3a;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.ctaWhatsappSvg {
+  width: 44px;
+  height: 44px;
+}
+
+.ctaTextGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ctaEyebrow {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #c48a3a;
+}
+
+.ctaTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(20px, 2.4vw, 28px);
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.ctaButton {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 28px;
+  background: linear-gradient(135deg, #f0ba75 0%, #c48a3a 100%);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 4px 18px rgba(196, 138, 58, 0.35);
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #f7ca8c 0%, #d49845 100%);
+  box-shadow: 0 8px 26px rgba(196, 138, 58, 0.5);
+}
+
+/* ---------------- RESPONSIVE BREAKPOINTS ---------------- */
+@media (max-width: 1080px) {
+  .swatchesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .valueGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 0;
+  }
+  .valueItemDivider:nth-child(2) {
+    border-right: none;
+  }
+  .bottomCtaBanner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 28px;
+  }
+  .ctaButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 65px 5% 55px;
+  }
+  .topBanner {
+    min-height: 340px;
+  }
+  .bannerContent {
+    padding: 32px 24px;
+  }
+  .swatchesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .valueGrid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .valueItemDivider {
+    border-right: none;
+    border-bottom: 1px solid rgba(196, 138, 58, 0.18);
+    padding-bottom: 14px;
+  }
+  .bannerCta {
+    width: 100%;
+    justify-content: center;
+  }
+  .ctaLeftCol {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

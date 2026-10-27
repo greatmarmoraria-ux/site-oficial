@@ -1,0 +1,322 @@
+/* =====================================================================
+   GREAT MARMORARIA — LIGHT MODE SECTIONS (SECTION 02 & FORWARD)
+   Palette: Off-White, Warm Cream/Sand Beige, Deep Graphite, Rich Gold
+===================================================================== */
+
+.lightWrapper {
+  background-color: #faf8f5;
+  color: #17191d;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Elegant transition line between dark Hero and light section */
+.transitionBridge {
+  height: 4px;
+  background: linear-gradient(90deg, #101215 0%, #d69e55 50%, #faf8f5 100%);
+  width: 100%;
+}
+
+/* Section 02 - Sobre Nós */
+.aboutSection {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 100px 4% 90px;
+}
+
+.sectionHeader {
+  max-width: 820px;
+  margin-bottom: 60px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #c48a3a;
+  margin-bottom: 14px;
+}
+
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(34px, 4.2vw, 54px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #111317;
+  margin: 0 0 20px;
+}
+
+.sectionLead {
+  font-family: var(--font-sans);
+  font-size: clamp(17px, 1.3vw, 19.5px);
+  font-weight: 400;
+  line-height: 1.65;
+  color: #4b5260;
+  max-width: 720px;
+}
+
+/* Two Column Grid */
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 56px;
+  align-items: center;
+}
+
+/* Left Content Column */
+.aboutContentCol {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.narrativeText {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555e6d;
+}
+
+.pillarsList {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.pillarCard {
+  background: #ffffff;
+  border: 1px solid rgba(196, 138, 58, 0.22);
+  border-left: 4px solid #c48a3a;
+  border-radius: 10px;
+  padding: 20px 24px;
+  box-shadow: 0 4px 18px rgba(17, 19, 23, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.pillarCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(196, 138, 58, 0.12);
+  border-color: rgba(196, 138, 58, 0.5);
+}
+
+.pillarTitle {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 700;
+  color: #16181d;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pillarTitleDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #c48a3a;
+}
+
+.pillarDescription {
+  font-family: var(--font-sans);
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #606877;
+  margin: 0;
+}
+
+/* Call to action */
+.ctaRow {
+  margin-top: 8px;
+}
+
+.lightCtaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #e5aa5f 0%, #c48a3a 100%);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(196, 138, 58, 0.32);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lightCtaButton:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #f0b76e 0%, #d49845 100%);
+  box-shadow: 0 10px 28px rgba(196, 138, 58, 0.45);
+}
+
+.ctaArrow {
+  font-size: 17px;
+  transition: transform 0.2s ease;
+}
+
+.lightCtaButton:hover .ctaArrow {
+  transform: translateX(4px);
+}
+
+/* Right Visual Column */
+.aboutVisualCol {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mainImageFrame {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(17, 19, 23, 0.12);
+  border: 1px solid rgba(196, 138, 58, 0.25);
+}
+
+.realImage {
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.mainImageFrame:hover .realImage {
+  transform: scale(1.03);
+}
+
+.imageOverlayCard {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(196, 138, 58, 0.3);
+  border-radius: 12px;
+  padding: 14px 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.imageBadgeTag {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #c48a3a;
+  margin-bottom: 2px;
+}
+
+.imageBadgeDesc {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #17191d;
+}
+
+/* Secondary Material Grid Showcase */
+.materialStrip {
+  background: #f4efe6;
+  border-top: 1px solid rgba(196, 138, 58, 0.15);
+  border-bottom: 1px solid rgba(196, 138, 58, 0.15);
+  padding: 50px 4%;
+}
+
+.materialContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.materialHeader {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.materialTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 3vw, 36px);
+  color: #17191d;
+  margin: 8px 0;
+}
+
+.materialGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.materialCard {
+  background: #ffffff;
+  border: 1px solid rgba(196, 138, 58, 0.2);
+  border-radius: 12px;
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.materialCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(196, 138, 58, 0.15);
+}
+
+.materialCardName {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 600;
+  color: #17191d;
+  margin-bottom: 8px;
+}
+
+.materialCardText {
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  color: #636b79;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .mainImageFrame {
+    height: 400px;
+  }
+  .materialGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .aboutSection {
+    padding: 70px 5% 60px;
+  }
+  .sectionTitle {
+    font-size: 30px;
+  }
+  .sectionLead {
+    font-size: 16px;
+  }
+  .mainImageFrame {
+    height: 320px;
+  }
+  .materialGrid {
+    grid-template-columns: 1fr;
+  }
+  .lightCtaButton {
+    width: 100%;
+    justify-content: center;
+  }
+}

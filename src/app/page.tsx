@@ -1,1 +1,35 @@
-export default function Home() { return <main><header className="top"><a className="brand" href="/">GREAT <span>MARMORARIA</span></a><a className="navcta" href="#orcamento">Solicitar orçamento</a></header><section className="hero"><p className="eyebrow">RIBEIRÃO PRETO · SP</p><h1>Pedras que transformam seus ambientes.</h1><p className="intro">Soluções em pedras para cozinhas, banheiros e áreas gourmet, com atenção a cada detalhe do seu projeto.</p><a className="button" href="#orcamento">Quero fazer um orçamento ↗</a></section><section className="section" id="servicos"><p className="eyebrow">O QUE FAZEMOS</p><h2>Seu projeto, do planejamento ao acabamento.</h2><div className="cards"><article><h3>Cozinhas</h3><p>Pias, bancadas e espaços para cooktop.</p></article><article><h3>Banheiros</h3><p>Lavatórios, nichos e detalhes em pedra.</p></article><article><h3>Áreas gourmet</h3><p>Bancadas e soluções para receber bem.</p></article></div></section><section className="section contact" id="orcamento"><p className="eyebrow">FALE COM A GREAT</p><h2>Vamos conversar sobre sua obra?</h2><p>Em breve, você poderá enviar suas medidas e referências diretamente pelo site.</p><p>Atendimento em Ribeirão Preto e região.</p></section><footer>© {new Date().getFullYear()} GREAT MARMORARIA</footer></main>; }
+import React from "react";
+import GreatHero from "@/components/GreatHero";
+import SobreNos from "@/components/SobreNos";
+import Servicos from "@/components/Servicos";
+import Materiais from "@/components/Materiais";
+import Projetos from "@/components/Projetos";
+import Contato from "@/components/Contato";
+import Footer from "@/components/Footer";
+
+export default function Home() {
+  return (
+    <main style={{ minHeight: "100vh", backgroundColor: "#0b0c0e" }}>
+      {/* SEÇÃO 01 — HERO (Aprovada: Dark Mode Cosentino & Levantina) */}
+      <GreatHero />
+
+      {/* SEÇÃO 02 — SOBRE NÓS (White Mode: Artesão, Valores & Diferenciais) */}
+      <SobreNos />
+
+      {/* SEÇÃO 03 — SERVIÇOS (White Mode: Cozinhas, Banheiros e Áreas Gourmet) */}
+      <Servicos />
+
+      {/* SEÇÃO 04 — PEDRAS E MATERIAIS (White Mode: Vitrine de 6 Amostras & Consultoria) */}
+      <Materiais />
+
+      {/* SEÇÃO 05 — PROJETOS REALIZADOS (White Mode: Filtros & Comparação Foto Real x IA) */}
+      <Projetos />
+
+      {/* SEÇÃO 06 — CONTATO E ORÇAMENTO (White Mode: Formulário WhatsApp, Dados & Visita) */}
+      <Contato />
+
+      {/* RODAPÉ OFICIAL */}
+      <Footer />
+    </main>
+  );
+}
