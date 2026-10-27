@@ -1,0 +1,375 @@
+/* =====================================================================
+   SEÇÃO 03 — SERVIÇOS
+   Identidade: White Mode, Warm Off-White, 3 Cards com base Nero Marquina e Faixa de Valor
+===================================================================== */
+
+.servicosSection {
+  background-color: #f7f4ee;
+  color: #111317;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(196, 138, 58, 0.2);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 90px 4% 85px;
+}
+
+/* Header Row */
+.headerRow {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 40px;
+  align-items: flex-end;
+  margin-bottom: 54px;
+}
+
+.headerCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.eyebrowRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #c48a3a;
+}
+
+.eyebrowLine {
+  width: 50px;
+  height: 1.5px;
+  background-color: #c48a3a;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 4.2vw, 54px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #111317;
+  margin: 0 0 20px;
+}
+
+.goldHighlight {
+  color: #c48a3a;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.leadText {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4b5260;
+  max-width: 620px;
+  margin: 0;
+}
+
+.sidebarCallout {
+  border-left: 3px solid #c48a3a;
+  padding: 8px 0 8px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.calloutLabel {
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #c48a3a;
+}
+
+.calloutDesc {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #2b303a;
+  margin: 0;
+}
+
+/* ---------------- 3 MAIN SERVICE CARDS ---------------- */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 56px;
+}
+
+.serviceCard {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(17, 19, 23, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+  border: 1px solid rgba(196, 138, 58, 0.2);
+}
+
+.serviceCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(196, 138, 58, 0.2);
+}
+
+.cardImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  background-color: #15181c;
+}
+
+.cardImage {
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.serviceCard:hover .cardImage {
+  transform: scale(1.05);
+}
+
+.cardContent {
+  position: relative;
+  background-color: #0d0f12;
+  color: #ffffff;
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.cardMarbleTexture {
+  position: absolute;
+  inset: 0;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.cardMarbleImg {
+  object-fit: cover;
+}
+
+.cardBody {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cardTopRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.cardIcon {
+  color: #c48a3a;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.cardIconSvg {
+  width: 30px;
+  height: 30px;
+}
+
+.cardTitle {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.cardDescription {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.6;
+  color: #d1d5db;
+  margin: 0 0 16px;
+  flex: 1;
+}
+
+.cardLinkRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #c48a3a;
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  font-weight: 600;
+  margin-top: auto;
+}
+
+.cardArrow {
+  font-size: 18px;
+  transition: transform 0.25s ease;
+}
+
+.serviceCard:hover .cardArrow {
+  transform: translateX(6px);
+}
+
+/* ---------------- VALUE PROPOSITIONS STRIP ---------------- */
+.valueStrip {
+  background-color: #fcfbf9;
+  border: 1px solid rgba(196, 138, 58, 0.25);
+  border-radius: 12px;
+  padding: 28px 24px;
+  margin-bottom: 40px;
+}
+
+.valueGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.valueItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 6px 18px;
+}
+
+.valueItemDivider {
+  border-right: 1px solid rgba(196, 138, 58, 0.22);
+}
+
+.valueIcon {
+  color: #c48a3a;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.valueIconSvg {
+  width: 28px;
+  height: 28px;
+}
+
+.valueContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.valueTitle {
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #111317;
+}
+
+.valueDesc {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: #606877;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Centered CTA Row */
+.ctaRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quoteCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 36px;
+  background: linear-gradient(135deg, #f0ba75 0%, #c48a3a 100%);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 15.5px;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(196, 138, 58, 0.32);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.quoteCta:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #f7ca8c 0%, #d49845 100%);
+  box-shadow: 0 10px 28px rgba(196, 138, 58, 0.45);
+}
+
+.quoteArrow {
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+.quoteCta:hover .quoteArrow {
+  transform: translateX(4px);
+}
+
+/* ---------------- RESPONSIVE BREAKPOINTS ---------------- */
+@media (max-width: 1080px) {
+  .headerRow {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .cardImageWrapper {
+    height: 220px;
+  }
+  .valueGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 0;
+  }
+  .valueItemDivider:nth-child(2) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 70px 5% 60px;
+  }
+  .valueGrid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .valueItemDivider {
+    border-right: none;
+    border-bottom: 1px solid rgba(196, 138, 58, 0.18);
+    padding-bottom: 14px;
+  }
+  .quoteCta {
+    width: 100%;
+    justify-content: center;
+  }
+}
