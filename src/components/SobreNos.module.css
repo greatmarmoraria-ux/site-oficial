@@ -1,0 +1,321 @@
+/* =====================================================================
+   SEÇÃO 02 — SOBRE NÓS
+   Identidade: White Mode, Warm Off-White, Grafite, Dourado e Tipografia Editorial
+===================================================================== */
+
+.sobreSection {
+  background-color: #faf8f5;
+  color: #111317;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(196, 138, 58, 0.2);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 90px 4% 80px;
+}
+
+/* Two Column Layout */
+.grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1.15fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+/* Left Column: Narrative */
+.contentCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.eyebrowRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #c48a3a;
+}
+
+.eyebrowLine {
+  width: 50px;
+  height: 1.5px;
+  background-color: #c48a3a;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(38px, 4.4vw, 56px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: #111317;
+  margin: 0 0 24px;
+}
+
+.goldHighlight {
+  color: #c48a3a;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.description {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4b5260;
+  margin-bottom: 34px;
+  max-width: 520px;
+}
+
+.historyCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #f0ba75 0%, #c48a3a 100%);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(196, 138, 58, 0.28);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.historyCta:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #f7ca8c 0%, #d49845 100%);
+  box-shadow: 0 10px 28px rgba(196, 138, 58, 0.42);
+}
+
+.ctaArrow {
+  font-size: 17px;
+  transition: transform 0.2s ease;
+}
+
+.historyCta:hover .ctaArrow {
+  transform: translateX(4px);
+}
+
+/* Right Column: Artisan Photo Frame & Dark Sidebar Badge */
+.visualCol {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(17, 19, 23, 0.12);
+  background-color: #111317;
+  min-height: 440px;
+  border: 1px solid rgba(196, 138, 58, 0.25);
+}
+
+.artisanFrame {
+  position: relative;
+  min-height: 440px;
+  width: 100%;
+}
+
+.artisanImg {
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.visualCol:hover .artisanImg {
+  transform: scale(1.03);
+}
+
+.detailSidebar {
+  background: linear-gradient(180deg, #16181d 0%, #0d0e11 100%);
+  padding: 34px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid rgba(196, 138, 58, 0.25);
+}
+
+.detailTitle {
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #c48a3a;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.detailDivider {
+  width: 32px;
+  height: 2px;
+  background-color: #c48a3a;
+  margin-bottom: 16px;
+}
+
+.detailText {
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #d1d5db;
+  margin: 0;
+}
+
+/* ---------------- BOTTOM DIFFERENTIALS STRIP ---------------- */
+.differentialsStrip {
+  position: relative;
+  background-color: #f3ece1;
+  border-radius: 14px;
+  border: 1px solid rgba(196, 138, 58, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  padding: 36px 30px;
+}
+
+.diffTextureBg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.diffTextureImg {
+  object-fit: cover;
+}
+
+.differentialsGrid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.diffCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 24px;
+}
+
+.diffCardWithDivider {
+  border-right: 1px solid rgba(196, 138, 58, 0.25);
+}
+
+.diffIconContainer {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: rgba(196, 138, 58, 0.12);
+  border: 1px solid rgba(196, 138, 58, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c48a3a;
+  flex-shrink: 0;
+}
+
+.diffIconSvg {
+  width: 24px;
+  height: 24px;
+}
+
+.diffContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.diffMetric {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: #111317;
+  line-height: 1.1;
+}
+
+.diffLabel {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #c48a3a;
+}
+
+.diffSub {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.4;
+  color: #606877;
+  margin: 0;
+}
+
+.disclosureNote {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: #8c93a0;
+  text-align: center;
+  margin-top: 18px;
+}
+
+/* ---------------- RESPONSIVE BREAKPOINTS ---------------- */
+@media (max-width: 1080px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .visualCol {
+    grid-template-columns: 1fr 200px;
+  }
+  .differentialsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 0;
+  }
+  .diffCardWithDivider:nth-child(2) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 70px 5% 60px;
+  }
+  .visualCol {
+    grid-template-columns: 1fr;
+  }
+  .artisanFrame {
+    min-height: 300px;
+  }
+  .detailSidebar {
+    border-left: none;
+    border-top: 1px solid rgba(196, 138, 58, 0.25);
+    padding: 24px 20px;
+  }
+  .differentialsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .diffCardWithDivider {
+    border-right: none;
+    border-bottom: 1px solid rgba(196, 138, 58, 0.2);
+    padding-bottom: 20px;
+  }
+  .historyCta {
+    width: 100%;
+    justify-content: center;
+  }
+}
