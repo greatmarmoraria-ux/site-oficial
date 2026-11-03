@@ -2,19 +2,14 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./SobreNos.module.css";
-
-const WHATSAPP_PHONE = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5516994370355";
-const WHATSAPP_URL = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(
-  "Olá! Conheci a GREAT MARMORARIA pelo site e gostaria de saber mais sobre a história e os projetos da empresa."
-)}`;
 
 export default function SobreNos() {
   const differentials = [
     {
-      metric: "100%",
-      label: "QUALIDADE",
-      sub: "Materiais selecionados e acabamento impecável",
+      title: "Excelência nos acabamentos",
+      sub: "Precisão técnica e cuidado na execução de cada peça, valorizando a qualidade do resultado final.",
       icon: (
         <svg
           className={styles.diffIconSvg}
@@ -32,9 +27,26 @@ export default function SobreNos() {
       ),
     },
     {
-      metric: "Projetos",
-      label: "SOB MEDIDA",
-      sub: "Ambientes residenciais e comerciais personalizados",
+      title: "Atenção a cada detalhe",
+      sub: "Projetos sob medida, desenvolvidos com dedicação às necessidades e expectativas de cada cliente.",
+      icon: (
+        <svg
+          className={styles.diffIconSvg}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <circle cx="12" cy="12" r="3" />
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Respeito às pessoas",
+      sub: "Valorização dos clientes, colaboradores e parceiros que fazem parte da nossa história.",
       icon: (
         <svg
           className={styles.diffIconSvg}
@@ -52,51 +64,13 @@ export default function SobreNos() {
         </svg>
       ),
     },
-    {
-      metric: "Rigor",
-      label: "E PRECISÃO",
-      sub: "Cuidado artesanal e precisão em cada detalhe",
-      icon: (
-        <svg
-          className={styles.diffIconSvg}
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <circle cx="12" cy="12" r="3" />
-          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
-        </svg>
-      ),
-    },
-    {
-      metric: "Ribeirão Preto/SP",
-      label: "ATENDIMENTO REGIONAL",
-      sub: "Presença local e suporte especializado em toda a região",
-      icon: (
-        <svg
-          className={styles.diffIconSvg}
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-          <circle cx="12" cy="10" r="3" />
-        </svg>
-      ),
-    },
   ];
 
   return (
     <section id="sobre-nos" className={styles.sobreSection}>
       <div className={styles.container}>
         <div className={styles.grid}>
-          {/* Coluna Esquerda: Conteúdo Editorial */}
+          {/* Coluna Esquerda: Conteúdo Institucional */}
           <div className={styles.contentCol}>
             <div className={styles.eyebrowRow}>
               <span className={styles.eyebrow}>SOBRE NÓS</span>
@@ -104,31 +78,47 @@ export default function SobreNos() {
             </div>
 
             <h2 className={styles.title}>
-              Tradição em pedras
-              <br />
-              que <em className={styles.goldHighlight}>transformam</em>
-              <br />
-              ambientes.
+              Da paixão por projetos à{" "}
+              <em className={styles.goldHighlight}>excelência</em> em cada
+              detalhe.
             </h2>
 
-            <p className={styles.description}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-              ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-              pariatur.
+            <div className={styles.narrativeGroup}>
+              <p className={styles.description}>
+                Fundada em março de 2021 por Edson Gonçalves Ferreira, a GREAT
+                MARMORARIA nasceu de um sonho que começou ainda na juventude,
+                entre os estudos técnicos no SENAI, a engenharia e o desejo de
+                transformar projetos em realidade.
+              </p>
+
+              <p className={styles.description}>
+                Foi no universo das pedras que Edson encontrou sua verdadeira
+                inspiração: descobrir como a força de uma rocha pode se
+                transformar em delicadeza, sofisticação e acabamentos que
+                valorizam cada ambiente.
+              </p>
+
+              <p className={styles.description}>
+                Mais do que fabricar bancadas e revestimentos, acreditamos que
+                cada projeto carrega uma história, uma expectativa e um sonho.
+              </p>
+
+              <p className={styles.description}>
+                Por isso, unimos conhecimento técnico, atenção aos detalhes e
+                dedicação em cada etapa, buscando entregar não apenas qualidade,
+                mas a satisfação de quem confia em nosso trabalho.
+              </p>
+            </div>
+
+            <p className={styles.highlightPhrase}>
+              <strong>GREAT MARMORARIA</strong> — Excelência que transforma
+              projetos em realidade.
             </p>
 
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.historyCta}
-            >
+            <Link href="/nossa-historia" className={styles.historyCta}>
               <span>Conheça nossa história</span>
               <span className={styles.ctaArrow}>→</span>
-            </a>
+            </Link>
           </div>
 
           {/* Coluna Direita: Imagem do Artesão e Card Lateral Escuro */}
@@ -174,7 +164,7 @@ export default function SobreNos() {
           <div className={styles.differentialsGrid}>
             {differentials.map((diff, index) => (
               <div
-                key={diff.label}
+                key={diff.title}
                 className={`${styles.diffCard} ${
                   index !== differentials.length - 1
                     ? styles.diffCardWithDivider
@@ -183,8 +173,7 @@ export default function SobreNos() {
               >
                 <div className={styles.diffIconContainer}>{diff.icon}</div>
                 <div className={styles.diffContent}>
-                  <span className={styles.diffMetric}>{diff.metric}</span>
-                  <span className={styles.diffLabel}>{diff.label}</span>
+                  <h3 className={styles.diffTitle}>{diff.title}</h3>
                   <p className={styles.diffSub}>{diff.sub}</p>
                 </div>
               </div>

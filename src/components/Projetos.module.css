@@ -319,6 +319,14 @@
   font-family: var(--font-sans);
   font-size: 13.5px;
   color: #606877;
+  margin: 0 0 10px;
+}
+
+.cardDesc {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.55;
+  color: #4b5260;
   margin: 0 0 14px;
 }
 

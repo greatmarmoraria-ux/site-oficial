@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Footer.module.css";
 
 const WHATSAPP_PHONE = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5516994370355";
@@ -11,12 +12,13 @@ const WHATSAPP_URL = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(
 
 export default function Footer() {
   const navLinks = [
-    { label: "Início", href: "#inicio" },
-    { label: "Sobre nós", href: "#sobre-nos" },
-    { label: "Serviços", href: "#servicos" },
-    { label: "Materiais", href: "#materiais" },
-    { label: "Projetos", href: "#projetos" },
-    { label: "Contato", href: "#contato" },
+    { label: "Início", href: "/#inicio" },
+    { label: "Sobre nós", href: "/#sobre-nos" },
+    { label: "Nossa história", href: "/nossa-historia" },
+    { label: "Serviços", href: "/#servicos" },
+    { label: "Materiais", href: "/#materiais" },
+    { label: "Projetos", href: "/#projetos" },
+    { label: "Contato", href: "/#contato" },
   ];
 
   return (
@@ -24,13 +26,15 @@ export default function Footer() {
       <div className={styles.footerContainer}>
         <div className={styles.footerTopRow}>
           <div className={styles.brandGroup}>
-            <Image
-              src="/images/logo-great-sem-telefone.png"
-              alt="GREAT MARMORARIA"
-              width={180}
-              height={98}
-              className={styles.footerLogo}
-            />
+            <Link href="/" title="GREAT MARMORARIA - Página Inicial">
+              <Image
+                src="/images/logo-great-sem-telefone.png"
+                alt="GREAT MARMORARIA"
+                width={180}
+                height={98}
+                className={styles.footerLogo}
+              />
+            </Link>
             <p className={styles.brandLocation}>
               Ribeirão Preto · SP | Excelência e pedras nobres sob medida
             </p>
@@ -40,9 +44,9 @@ export default function Footer() {
             <ul className={styles.navList}>
               {navLinks.map((item) => (
                 <li key={item.href}>
-                  <a href={item.href} className={styles.navLink}>
+                  <Link href={item.href} className={styles.navLink}>
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

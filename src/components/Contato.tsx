@@ -43,8 +43,15 @@ export default function Contato() {
     }
 
     const cleanPhone = formData.whatsapp.replace(/\D/g, "");
-    if (!cleanPhone || cleanPhone.length < 8) {
-      newErrors.whatsapp = "Informe um número de WhatsApp válido.";
+    if (!cleanPhone || cleanPhone.length < 10 || cleanPhone.length > 11) {
+      newErrors.whatsapp = "Informe um número de WhatsApp válido com DDD (ex: 16 99999-9999).";
+    }
+
+    if (formData.email.trim()) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(formData.email.trim())) {
+        newErrors.email = "Informe um e-mail válido ou deixe o campo em branco.";
+      }
     }
 
     if (!formData.descricao.trim()) {
@@ -236,8 +243,13 @@ ${formData.descricao.trim()}`;
                     value={formData.email}
                     onChange={handleInputChange}
                     placeholder="seuemail@exemplo.com"
-                    className={styles.inputField}
+                    className={`${styles.inputField} ${
+                      errors.email ? styles.inputError : ""
+                    }`}
                   />
+                  {errors.email && (
+                    <span className={styles.errorText}>{errors.email}</span>
+                  )}
                 </div>
 
                 <div className={styles.inputGroup}>

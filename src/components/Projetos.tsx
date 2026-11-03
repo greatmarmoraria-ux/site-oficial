@@ -9,6 +9,7 @@ const WHATSAPP_PHONE = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5516994370355
 interface ProjectItem {
   id: string;
   title: string;
+  description?: string;
   material: string;
   categoryTag: string;
   categories: string[];
@@ -61,30 +62,25 @@ export default function Projetos() {
     },
     {
       id: "cozinha-clara",
-      title: "Cozinha com Bancadas Claras",
-      material: "Quartzo Branco / Granito Claro",
+      title: "Cozinha com Bancada em Pedra Clara",
+      description:
+        "Bancada sob medida com cuba de inox, cooktop e acabamento que valoriza a funcionalidade e a elegância do ambiente.",
+      material: "Pedra clara — especificação a confirmar.",
       categoryTag: "Cozinha",
       categories: ["cozinhas"],
-      ambientedImage: "/images/projeto-cozinha-bancadas-claras.webp",
-      originalImage: "/images/projeto-cozinha-clara-original.jpeg",
+      ambientedImage: "/images/projetos/cozinha-bancada-clara-ambientada.webp",
+      originalImage: "/images/projetos/cozinha-bancada-clara-original.jpg",
     },
     {
-      id: "ilha-gourmet-nicho",
-      title: "Ilha Gourmet com Nicho e Cooktop",
-      material: "Granito Verde Ubatuba Especial",
-      categoryTag: "Área Gourmet & Nicho",
-      categories: ["cozinhas", "areas-gourmet", "nichos"],
-      ambientedImage: "/images/hero-ambiente-conceitual.webp",
-      originalImage: "/images/cozinha-ilha-granito-real.png",
-    },
-    {
-      id: "lavatorio-espelho-lateral",
-      title: "Lavatório com Espelho e Pé Lateral",
-      material: "Mármore Nero Marquina / Granito",
-      categoryTag: "Banheiro & Pé Lateral",
-      categories: ["banheiros", "pes-laterais", "nichos"],
-      ambientedImage: "/images/servicos-banheiros.png",
-      originalImage: "/images/lavatorio-preto-espelho.png",
+      id: "cozinha-preta",
+      title: "Cozinha com Bancada em Pedra Preta",
+      description:
+        "Bancada sob medida em pedra preta, com cuba de inox, cooktop e acabamento elegante, valorizando a praticidade e a sofisticação do ambiente.",
+      material: "Pedra preta — especificação a confirmar.",
+      categoryTag: "Cozinha",
+      categories: ["cozinhas"],
+      ambientedImage: "/images/projetos/cozinha-bancada-preta-ambientada.webp",
+      originalImage: "/images/projetos/cozinha-bancada-preta-original.jpg",
     },
   ];
 
@@ -221,6 +217,9 @@ export default function Projetos() {
                   </div>
 
                   <p className={styles.cardMaterial}>{proj.material}</p>
+                  {proj.description && (
+                    <p className={styles.cardDesc}>{proj.description}</p>
+                  )}
 
                   <div className={styles.cardFooterAction}>
                     <span className={styles.cardCategoryTag}>
